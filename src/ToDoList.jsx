@@ -32,7 +32,7 @@ const TodoList = ({ todos, activBotton, deleteTodo, deleteCompletedToDo, activTo
             activTodoTask(index);
           }}
           />
-        <ListItemText primary={todo.task} />
+        <ListItemText primary={todo.active ? <s>{todo.task}</s> : todo.task} />
         <ListItemSecondaryAction>
           <IconButton
             aria-label="Delete"
