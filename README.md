@@ -12,4 +12,12 @@
 Ключевая на ваш взгляд функциональность покрыта тестами
 Проект должен запускаться командой npm i && npm run start
 
+#### После клонирования репозитория запустить в корне проекта:
+
+`$ npm i && npm run start`
+
+#### Для запуска тестов:
+
+`$ npm test -- --testMatch="<rootDir>/__tests__/useInputState.test.js" --collectCoverage --collectCoverageFrom="src/useInputState.jsx"`
+
 ### [Демо](https://to-do-react-hooks-lac.vercel.app/)

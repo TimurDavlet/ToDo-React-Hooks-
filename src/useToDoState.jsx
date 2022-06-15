@@ -1,5 +1,5 @@
 /* eslint-disable default-case */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default (initialValue) => {
   const [todos, setTodos] = useState(initialValue);
