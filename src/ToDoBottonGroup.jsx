@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
@@ -21,5 +23,5 @@ const TodoBottonGroup = ({todos, activeBottonTask, deleteCompletedToDo}) => {
   );
 };
       
-      export default TodoBottonGroup;
+export default TodoBottonGroup;
       

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { renderHook } from "@testing-library/react-hooks";
 import useToDoState from "../src/useToDoState.jsx";
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -9,14 +10,14 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import Button from '@mui/material/Button';
 
 const filterToDo = (todos, activBotton) => {
-    switch(activBotton) {
-        case 'All':
-            return todos;
-        case 'Active':
-            return todos.filter((task) => !task.active);
-        case 'Complited':
-            return todos.filter((task) => task.active);
-    }
+  switch(activBotton) {
+    case 'All':
+      return todos;
+    case 'Active':
+      return todos.filter((task) => !task.active);
+    case 'Complited':
+      return todos.filter((task) => task.active);
+  }
 };
 
 const TodoList = ({ todos, activBotton, deleteTodo, activTodoTask }) => (
