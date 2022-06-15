@@ -27,7 +27,6 @@ const App = () => {
             }
           }}
         />
-      
         <ToDoList todos={todos} activBotton={activBotton} deleteTodo={deleteTodo} deleteCompletedToDo={deleteCompletedToDo} activTodoTask={activTodoTask} />
         <TodoBottonGroup todos={todos} activBotton={activBotton} activeBottonTask={activeBottonTask} deleteCompletedToDo={deleteCompletedToDo} />
       </Box>
