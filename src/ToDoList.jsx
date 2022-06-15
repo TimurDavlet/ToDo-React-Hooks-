@@ -19,7 +19,7 @@ const filterToDo = (todos, activBotton) => {
     }
 };
 
-const TodoList = ({ todos, activBotton, deleteTodo, deleteCompletedToDo, activTodoTask }) => (
+const TodoList = ({ todos, activBotton, deleteTodo, activTodoTask }) => (
   <List sx={{ width: '100%', maxWidth: 460, bgcolor: 'background.paper', margin: 'auto' }}>
     <Button size="small" sx={{ textAlign: "left" }}>Total tasks: {todos.length}</Button>
     {filterToDo(todos, activBotton).map((todo, index) => (
