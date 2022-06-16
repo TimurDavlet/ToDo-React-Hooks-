@@ -23,14 +23,14 @@ const filterToDo = (todos, activBotton) => {
 const TodoList = ({ todos, activBotton, deleteTodo, activTodoTask }) => (
   <List sx={{ width: '100%', maxWidth: 460, bgcolor: 'background.paper', margin: 'auto' }}>
     <Button size="small" sx={{ textAlign: "left" }}>Total tasks: {todos.length}</Button>
-    {filterToDo(todos, activBotton).map((todo, index) => (
-      <ListItem sx={{ textAlign: 'center' }} key={index.toString()} dense button>
+    {filterToDo(todos, activBotton).map((todo) => (
+      <ListItem sx={{ textAlign: 'center' }} key={todo.id.toString()} dense button>
         <Checkbox 
           tabIndex={-1}
           checked={todo.active}
           disableRipple
           onChange={() => {
-            activTodoTask(index);
+            activTodoTask(todo.id);
           }}
           />
         <ListItemText primary={todo.active ? <s>{todo.task}</s> : todo.task} />
@@ -38,7 +38,7 @@ const TodoList = ({ todos, activBotton, deleteTodo, activTodoTask }) => (
           <IconButton
             aria-label="Delete"
             onClick={() => {
-              deleteTodo(index);
+              deleteTodo(todo.id);
             }}
           >
             <DeleteIcon />

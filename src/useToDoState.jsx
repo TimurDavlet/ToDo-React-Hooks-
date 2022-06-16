@@ -1,5 +1,6 @@
 /* eslint-disable default-case */
 import { useState } from 'react';
+import { uniqueId } from 'lodash';
 
 export default (initialValue) => {
   const [todos, setTodos] = useState(initialValue);
@@ -9,19 +10,20 @@ export default (initialValue) => {
     todos,
     activBotton,
     addTodo: (todoText) => {
-      setTodos([...todos, { task: todoText, active: false }]);
+      const id = uniqueId();
+      setTodos([...todos, { task: todoText, active: false, id }]);
     },
-    deleteTodo: (todoIndex) => {
-      const newTodos = todos.filter((_, index) => index !== todoIndex);
+    deleteTodo: (id) => {
+      const newTodos = todos.filter((task) => task.id !== id);
       setTodos(newTodos);
     },
     deleteCompletedToDo: () => {
       const newTodos = todos.filter((task) => !task.active);
       setTodos(newTodos);
     },
-    activTodoTask: (todoIndex) => {
+    activTodoTask: (id) => {
       // eslint-disable-next-line max-len
-      const activTodos = todos.map((todo, index) => (index === todoIndex ? ({ active: !todo.active, task: todo.task }) : todo));
+      const activTodos = todos.map((todo) => (todo.id === id ? ({ active: !todo.active, task: todo.task, id: todo.id }) : todo));
       setTodos(activTodos);
     },
     activeBottonTask: (bottonName) => {
