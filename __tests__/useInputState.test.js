@@ -46,4 +46,14 @@ describe("useInputState tests", () => {
       activTodoTask(2);
       expect(result.current.todos).toEqual([{active: true, task: 'test1', id: 1}, {active: true, task: 'test2', id: 2}]);
     });
+
+    it("activeBottonTask", () => {
+      const { result } = renderHook(() => useToDoState([]));
+      const { activBotton, activeBottonTask } = result.current;
+      expect(activBotton).toBe('All');
+      activeBottonTask('Active');
+      expect(result.current.activBotton).toBe('Active');
+      activeBottonTask('Complited');
+      expect(result.current.activBotton).toBe('Complited');
+    });
   });
