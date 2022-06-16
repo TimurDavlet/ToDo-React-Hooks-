@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655371965994" clover="3.2.0">
-  <project timestamp="1655371965994" name="All files">
+<coverage generated="1655387060083" clover="3.2.0">
+  <project timestamp="1655387060084" name="All files">
     <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0" elements="7" coveredelements="0" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
     <file name="useInputState.jsx" path="/home/tim/Документы/ToDo-React-Hooks-/src/useInputState.jsx">
       <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
